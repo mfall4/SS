@@ -169,8 +169,8 @@ h1 {
     display: none;
     border: 1px solid black;
     border-radius: 3px;
-    width: 500px;
-    height: 200px;
+    width: 95%;
+    height: 250px;
     padding: 5px;
     margin: 5px;
     display: flex;
@@ -193,6 +193,7 @@ h1 {
     background-color: rgb(0, 138, 0);
     color: white;
     border: 1px solid black;
+    box-shadow: 0px 0px 5px 1px rgb(0, 0, 0);
   }
   
   
@@ -252,7 +253,7 @@ h1 {
   .modal-content {
     background-color: #fefefe;
     margin-left: 30%;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #888;
     width: 40%;
     border-radius: 5px;
@@ -265,8 +266,8 @@ h1 {
     font-size: 28px;
     font-weight: bold;
     padding: 0;
-    margin-right: -10px;
-    margin-top: -20px;
+    margin-right: -5px;
+    margin-top: -15px;
   }
   
   .close:hover,
@@ -283,4 +284,5 @@ h1 {
       padding-left: 3px;
       width: 200px;
       margin-left: 5px;
+      outline: none;
   }

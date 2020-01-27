@@ -35,6 +35,7 @@ function search() {
       modal.style.display = "block";
       let aC = document.getElementById('foo');
       aC.style.display = "none";
+      document.getElementById('wiSearch').focus();
     }
 
     /*function showModal() {
