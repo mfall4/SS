@@ -4,11 +4,11 @@ html {
 }
 
 body {
-    width: 90%;
+    width: 95%;
     max-width: 1200px;
     margin: 1em auto;
-    background: url("../resources/images/TDBank-Store.jpg") fixed no-repeat;
-    background-size: contain;
+    background: url("../resources/images/TDBank-Store.jpg") left top fixed no-repeat;
+    background-size: cover;
     background-color: black;
 }
 
@@ -16,71 +16,266 @@ body {
     display: grid;
     grid-template-columns: repeat(12, minmax(0,1fr));
     /*grid-auto-rows: minmax(auto, auto);*/
-    grid-template-rows: repeat(8, minmax(0,1fr));
+    grid-template-rows: repeat(8, minmax(0,auto));
     grid-gap: 10px;
-    border: 1px solid black;
-    padding: 10px;
+    /*border: 1px solid white;*/
+    padding: 0px;
   }
 
-.container > div {
-    border: 1px solid black;
-}
 
 img {
-    width:90%;
+    width: 90%;
+    height: auto;
     grid-column: 1 / 2;
-    grid-row: 1;
+    grid-row: 1 / 1;
+    padding-left: 5px;
+    padding-top: 5px;
 }
 
 h1 {
-    grid-column: 2 / 13;
-    grid-row: 1;
+    grid-column: 2 / 12;
+    grid-row: 1 / 1;
     margin: auto auto auto 0px;
+    -webkit-text-stroke: 2px black;
+    -webkit-text-fill-color: white;
+    font-size: 50px;
   }
 
 #menu {
     grid-column: 1 / 10;
     grid-row: 2 / 2;
+    border-radius: 5px;
+    background-color: rgb(28, 28, 28);
 }
 
 #newsMedia {
     grid-column: 10 / 13;
     grid-row: 2 / 2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(28, 28, 28);
 }
 
-#pulseOne {
-    grid-column: 1 / 5;
-    grid-row: 3 / 5;
-    border: 1px solid black;
+#pulseContainer {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    height: 200px;
+    width: 300px;
+    /*border: 1px solid white;*/
+    border-radius: 5px;
+    margin-left: 5px;
+}
+  
+  #pulseCard {
+    display: flex;
+    height: 200px;
+    width: 250px;
+    background-color: #17141d;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 0 0 2rem #000;
+    transition: 0.2s ease-in-out;
     position: relative;
-}
+    left: 0px;
+  }
+  
+  #pulseCard:not(:first-child) {
+      margin-left: -50px;
+  }
+  
+  #pulseTitle {
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
 
-#pulseTwo {
-    grid-column: 3 / 7;
-    grid-row: 3 / 5;
-    border: 1px solid black;
+#menuBar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 5px;
+  }
+
+  #ql {
     position: relative;
-}
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .qlSub {
+    display: none;
+    position: absolute;
+    left: -25px;
+    top: 50px;
+    background-color: #f1f1f1;
+    width: 200px;
+    box-shadow: 0px 0px 15px 2px rgb(0, 0, 0);
+    z-index: 1;
+    border-radius: 3px;
+  }
+  
+  #filler {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: -10px;
+    width: 200px;
+    height: 10px;
+    z-index: -1;
+  }
+  
+  /* Links inside the dropdown */
+  .qlSub a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 3px;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .qlSub a:hover {
+    background-color: #ddd;
 
-#pulseThree {
-    grid-column: 5 / 9;
-    grid-row: 3 / 5;
+}
+  
+  /* Show the dropdown menu on hover */
+  #ql:hover .qlSub, #filler {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  #ql:hover #myBtn2 {
+      background: linear-gradient(rgb(255, 255, 255), rgb(205, 205, 205));
+      color: rgb(0, 98, 0); border-color: rgb(0, 138, 0);
+      box-shadow: 0px 0px 5px 3px rgb(0, 0, 0);
+    }
+
+  
+  .hidden-tags {
+    display: none;
+  }
+  
+  #foo {
+    display: none;
     border: 1px solid black;
-    position: relative;
-}
-
-#pulseFour {
-    grid-column: 7 / 11;
-    grid-row: 3 / 5;
+    width: 500px;
+    height: 200px;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  .procedure {
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 3px;
+    padding-left: 6px;
+    display: none;
+  }
+  
+  .procedure:hover {
+    background-color: rgb(0, 138, 0);
+    color: white;
     border: 1px solid black;
-    position: relative;
-}
+  }
+  
+  
+   button {
+      border: 2px solid white;
+    background: linear-gradient(rgb(0, 178, 0), rgb(0, 98, 0));
+      color: white;
+      width: 150px;
+      height: 45px;
+      font-family: 'Segoe UI';
+      font-size: 16px;
+      transition: all .1s ease-in-out;
+   }
 
-.pulse {
-    background-color: white;
-}
+   #menuBtn1 {
+       border-top-left-radius: 5px;
+       border-bottom-left-radius: 5px;
+       border-right: none;
+   }
 
-.pulse:hover {
-    z-index: 9999;
-    box-shadow: 0px 0px 10px black;
+   #menuBtn3 {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: none;
 }
+   
+  #myBtn2 {
+    cursor: default;
+  }
+
+   button:hover {
+       cursor: pointer;
+     background: linear-gradient(rgb(255, 255, 255), rgb(205, 205, 205));
+     color: rgb(0, 98, 0);
+      border-color: rgb(0, 138, 0);
+      /*background: rgb(255, 255, 255);*/
+      box-shadow: 0px 0px 5px 3px rgb(0, 0, 0);
+     z-index: 2;
+   }
+   
+   /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+      border-radius: 5px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #wiSearch {
+      border: none;
+      border-bottom: 1px solid black;
+      font-family: 'Segoe UI';
+      padding-left: 3px;
+      width: 200px;
+      margin-left: 5px;
+  }
