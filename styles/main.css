@@ -56,7 +56,6 @@ h1 {
     justify-content: center;
     align-items: center;
     border: 1px solid white;
-    margin: 5px;
     text-decoration: none;
     color: white;
     background-color: rgb(28, 28, 28);
@@ -75,14 +74,11 @@ h1 {
   #pulseCard {
     display: flex;
     height: 200px;
-    width: 250px;
+    width: 300px;
     background-color: #17141d;
     border-radius: 10px;
     border: 1px solid white;
     box-shadow: 0 0 2rem #000;
-    transition: 0.2s ease-in-out;
-    position: relative;
-    left: 0px;
   }
   
   #pulseCard:not(:first-child) {
@@ -90,11 +86,16 @@ h1 {
   }
   
   #pulseTitle {
-    color: white;
-    font-weight: 300;
+    font-weight: 400;
     position: absolute;
     margin-left: 10px;
     margin-top: 10px;
+  }
+
+  #pulseText {
+    font-weight: 100;
+    margin-top: 40px;
+    margin-left: 15px;
   }
 
 #menuBar {
@@ -167,6 +168,7 @@ h1 {
   #foo {
     display: none;
     border: 1px solid black;
+    border-radius: 3px;
     width: 500px;
     height: 200px;
     padding: 5px;
@@ -199,7 +201,7 @@ h1 {
     background: linear-gradient(rgb(0, 178, 0), rgb(0, 98, 0));
       color: white;
       width: 150px;
-      height: 45px;
+      height: 40px;
       font-family: 'Segoe UI';
       font-size: 16px;
       transition: all .1s ease-in-out;
@@ -236,8 +238,8 @@ h1 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
+    padding-top: 125px; /* Location of the box */
+    left: 0px;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
@@ -249,11 +251,11 @@ h1 {
   /* Modal Content */
   .modal-content {
     background-color: #fefefe;
-    margin: auto;
+    margin-left: 30%;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-      border-radius: 5px;
+    width: 40%;
+    border-radius: 5px;
   }
   
   /* The Close Button */
@@ -262,6 +264,9 @@ h1 {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    padding: 0;
+    margin-right: -10px;
+    margin-top: -20px;
   }
   
   .close:hover,

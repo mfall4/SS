@@ -33,6 +33,8 @@ function search() {
     // When the user clicks the button, open the modal 
     btn.onclick = function() {
       modal.style.display = "block";
+      let aC = document.getElementById('foo');
+      aC.style.display = "none";
     }
 
     /*function showModal() {
@@ -55,10 +57,8 @@ function search() {
       }
     }
 
-    function pTitle() {
     var d = new Date();
     var d1 = new Date().getDate();
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
     document.getElementById("pulseTitle").innerText = months[d.getMonth()] + " " + d1;
-    }
