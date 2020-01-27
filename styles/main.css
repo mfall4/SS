@@ -1,15 +1,14 @@
 html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
-    background-image: url("/resources/images/TDBank-Store.jpg");
 }
 
 body {
     width: 90%;
     max-width: 1200px;
     margin: 1em auto;
-    /*background-image: url("/resources/images/TDBank-Store.jpg");*/
-    /*background-color: black;*/
+    background: url("../resources/images/TDBank-Store.jpg") center no-repeat;
+    background-color: black;
 }
 
 .container {
@@ -41,7 +40,6 @@ h1 {
 #menu {
     grid-column: 1 / 10;
     grid-row: 2 / 2;
-    background-image: url("../resources/images/TDBank-Store.jpg");
 }
 
 #newsMedia {
