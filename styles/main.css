@@ -1,13 +1,14 @@
 html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
+    background-image: url("/resources/images/TDBank-Store.jpg");
 }
 
 body {
     width: 90%;
     max-width: 1200px;
     margin: 1em auto;
-    background-image: url("/resources/images/TDBank-Store.jpg");
+    /*background-image: url("/resources/images/TDBank-Store.jpg");*/
     background-color: black;
 }
 
