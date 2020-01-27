@@ -6,6 +6,7 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 1em auto;
+    background-image: url(/resources/images/TDBank-Store.jpg);
 }
 
 .container {
