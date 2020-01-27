@@ -7,7 +7,8 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 1em auto;
-    background: url("../resources/images/TDBank-Store.jpg") center no-repeat;
+    background: url("../resources/images/TDBank-Store.jpg") fixed no-repeat;
+    background-size: contain;
     background-color: black;
 }
 
